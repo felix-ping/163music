@@ -98,7 +98,8 @@
                 this.view.reset()
                 let obj = JSON.parse(JSON.stringify(this.model.data))
                 window.eventHub.emit('create', obj)
-            })
+            }).then(()=>{this.model.data.id=null})
+            //这里submit应该不可用
         },
         update(){
             let needs='name singer url'.split(' ')
@@ -109,8 +110,12 @@
             data.id=this.model.data.id
             this.model.updateData(data).then(()=>{
                 window.eventHub.emit('update',data)
+            }).then(()=>{
+                this.view.reset()
+                this.model.data.id=null
+                //window.eventHub.emit('update',data)  这样子处理
             })
-            
+            //这里submit应该不可用
         }
     }
     controller.init(view,model)
