@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>163music-demo</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <script src="//cdn1.lncld.net/static/js/3.6.4/av-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="../node_modules/qiniu-js/dist/qiniu.min.js"></script>
+    <script src="../node_modules/plupload/js/moxie.js"></script>
+    <script src="../node_modules/plupload/js/plupload.full.min.js"></script>
+    <script src="//at.alicdn.com/t/font_635843_7y0ijdejijmxi529.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo"></div>
+    </header>
+    <div class="redBar"></div>
+    <main>
+        <div class="wrapper">
+            <section class="ListWrapper">
+                <div class="newSong"></div>
+                <div class="songListWrapper"></div>
+            </section>
+            <section class="admin">
+                <div class="uploadWrapper">
+                    <div class="upload" id="upload">
+                        <svg class="icon " id="icon" aria-hidden="true">
+                            <use xlink:href="#icon-upload"></use>
+                        </svg>
+                        <div id="uploadStatus">请选择上传或拖拽上传</div>
+                    </div> 
+                </div>
+                <div class="editWrapper"></div> 
+            </section>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="./js/initializersAV.js"></script>
+    <script src="./js/admin.js"></script>
+    <script src="./js/eventHub.js"></script>
+    <script src="./js/song-list.js"></script>
+    <script src="./js/new-song.js"></script>
+    <script src="./js/song-form.js"></script>
+    <script src="./js/upload-song.js"></script>
+</body>
+</html>
