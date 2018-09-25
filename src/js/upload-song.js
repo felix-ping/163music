@@ -49,6 +49,7 @@
                             name: response.key
                         })
                         window.eventHub.emit('new',{})
+                        window.eventHub.emit('show','edit')
                     },
                     'Error': function (up, err, errTip) {
                         //上传出错时,处理相关的事情
@@ -66,8 +67,20 @@
             this.model=model
             this.model.initModel()
             this.view.render(this.model.data)
+            let editModul=document.querySelector('.editWrapper')
+            let uploadModul=document.querySelector('.uploadWrapper')
             window.eventHub.on('upload',(data)=>{
-                console.log('newsong',data)
+                
+            })
+            window.eventHub.on('show',(data)=>{
+                if(data==='upload'){
+                    uploadModul.style.display='block'
+                    editModul.style.display='none'
+                }else if(data==='edit'){
+
+                    uploadModul.style.display='none'
+                    editModul.style.display='block'
+                }
             })
         },
     }

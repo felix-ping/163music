@@ -41,7 +41,6 @@
             });
         },
         updateData(data){
-            console.log(data,data.id)
             let song = AV.Object.createWithoutData('Song', data.id);
             song.set('name',data.name);
             song.set('singer',data.singer);
@@ -65,8 +64,7 @@
             })
             window.eventHub.on('select',(songsData)=>{
                 this.model.data=songsData
-                this.view.render(this.model.data) 
-                console.log(songsData)
+                this.view.render(this.model.data)
             })
             window.eventHub.on('new',(data)=>{
                 if(this.model.data.id){
@@ -75,6 +73,11 @@
                     Object.assign(this.model.data,data)
                 }
             })
+            window.eventHub.on('uploadDisabled',()=>{
+                let el=document.getElementById('save')
+                el.disabled='disabled'
+            })
+
         },
         bindEvents(){
             $(this.view.el).on('submit','form',(e)=>{
@@ -82,10 +85,13 @@
                 if(this.model.data.id){
                     console.log("有")
                     this.update()
+                    window.alert('保存成功!')
                 }else{
                     console.log('无')
                     this.save()
-                }     
+                    window.alert('上传成功!')
+                }   
+                 
             })
               
         },
@@ -93,12 +99,16 @@
             let needs = 'name singer url'.split(' ')
             let data ={}
             needs.map((string) => { data[string] = $(this.view.el).find(`[name="${string}"]`).val() })
-            console.log(111111,data)
             this.model.create(data).then(() => {
                 this.view.reset()
                 let obj = JSON.parse(JSON.stringify(this.model.data))
                 window.eventHub.emit('create', obj)
-            }).then(()=>{this.model.data.id=null})
+            }).then(()=>{
+                this.model.data.id=null
+                window.eventHub.emit('uploadDisabled',{}) 
+               
+
+            })
             //这里submit应该不可用
         },
         update(){
@@ -113,9 +123,9 @@
             }).then(()=>{
                 this.view.reset()
                 this.model.data.id=null
-                //window.eventHub.emit('update',data)  这样子处理
+                window.eventHub.emit('uploadDisabled',{})  
             })
-            //这里submit应该不可用
+            
         }
     }
     controller.init(view,model)

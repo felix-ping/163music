@@ -64,9 +64,6 @@
                 this.model.data.songs.push(songData)   
                 this.view.render(this.model.data)
             })
-            // window.eventHub.on('show',()=>{
-            //    // xxx.show//////////////////////
-            // })
             window.eventHub.on('update',(data)=>{
                 let equal=this.model.data.songs
                 for(let i=0; i<equal.length;i++){
@@ -91,6 +88,7 @@
                 }
                 let songsData=JSON.parse(JSON.stringify(data))
                 window.eventHub.emit('select',songsData)
+                window.eventHub.emit('show','edit')
             })
         }
 

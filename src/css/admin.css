@@ -119,6 +119,11 @@ main{
         color:#000;
     }
 }
+
+.editWrapper{
+    display: none
+}
+
 .admin>.save{
     width:80px;
     height: 50px;
