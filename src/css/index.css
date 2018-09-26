@@ -1,0 +1,111 @@
+.app{
+  position: relative;
+  background-color: #fff;
+}
+.topWrapper{
+  position: fixed;
+  width: 100%; 
+  top:0;
+  left:0;
+}
+.topWrapper .topBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; 
+  background-color: #d43c33;
+}
+.topWrapper .topBar .topSvg{
+  padding: 20px 0 19px 10px;
+  display: flex
+}
+.topWrapper .topBar .topSvg svg{
+  width:142px;
+  height: 25px;
+  line-height: 25px;
+  align-items: center;
+}
+.topWrapper .topBar .topDownload{
+  color: #fff;
+  margin: 0 10px 0 0;
+  text-align: center;
+  font-size: 15px;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 37.5%/100%;
+}
+.topWrapper .topBar .topDownload .topButton{
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+}
+
+
+.topNavigation{
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.topNavigation::after{
+  background-color: #ccc;
+  opacity: 0.2;
+  width: 100%;
+  height: 1px;
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 1px;  
+}
+.topNavigation li{
+  font-size: 15px;
+  width:33.33%;
+  color:#333;
+  flex-grow: 1;
+  text-align: center;
+  cursor: pointer;
+}
+.topNavigation li div{
+  line-height: 40px;
+  position: relative;
+  display: inline-block;
+  
+}
+.topNavigation li div span{
+  vertical-align:middle;
+  padding: 0 5px;
+}
+.topNavigation span::after{
+  content:'';
+  display: block;
+  background-color: #d33a31;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom:1px; 
+  z-index: 1;
+}
+ 
+.tabWrapper{
+  margin-top: 105px; 
+}
+.tabWrapper .tabContainer{
+  padding-top:20px ;
+  background-color: rgba(252,252,253);
+}
+.tabWrapper .tabContainer h2{
+  position: relative;
+  padding-left: 9px;
+  margin-bottom: 14px;
+  font-size: 17px;
+  height: 20px;
+  line-height: 20px;
+}
+.tabWrapper .tabContainer h2::after{
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  width: 2px;
+  height: 16px;
+  background-color: #d33a31;
+}
