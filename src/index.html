@@ -7,6 +7,9 @@
   <title>网易云音乐播放首页</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/index.css">
+  <script src="https://cdn1.lncld.net/static/js/3.6.4/av-min.js"></script>
+  <script src="https://at.alicdn.com/t/font_635843_7y0ijdejijmxi529.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
   <div class="app" id='app'>
@@ -58,27 +61,97 @@
         </div>
       </section>
       <ul class="topNavigation">
-        <li><div><span>推荐音乐</span></div></li>
-        <li><div><span>热歌榜</span></div></li>
-        <li><div><span>搜索</span></div></li>
+        <li data-tab-nav='tabNav-1'><div><span>推荐音乐</span></div></li>
+        <li data-tab-nav='tabNav-2' class="active"><div><span>热歌榜</span></div></li>
+        <li data-tab-nav='tabNav-3'><div><span>搜索</span></div></li>
       </ul>
     </header>
     <main class="tabWrapper">
       <section class="tabContainer tab-1">
         <h2>推荐歌单</h2> 
-        <ul class="recomandLists">
+        <ul class="recommendLists">
           <li>
             <a href="">
               <div class="cover">
-                <img width=105 src="https://i.loli.net/2017/08/22/599ba7a0aea8b.jpg" alt="封面">
-                <span>这里是播放量</span>   
-                <!-- 这里有个阴影效果::after -->
+                <img alt="封面"
+                 src="./img/1.jpg" 
+                >
+                <span>62.8万</span>
               </div>
-              <p>两行文字两行文字两行文字两行文字两行文字</p>
+              <p>两行文字两行文字两行文字两行文字两行</p>
             </a>
           </li>
+          <li>
+              <a href="">
+                <div class="cover">
+                  <img alt="封面"
+                   src="./img/2.jpg" 
+                  >
+                  <span>162.8万</span>
+                </div>
+                <p>两行文字两行文字两行文字两行文字两行</p>
+              </a>
+            </li>
+            <li>
+                <a href="">
+                  <div class="cover">
+                    <img alt="封面"
+                     src="./img/3.jpg" 
+                    >
+                    <span>626.8万</span>
+                  </div>
+                  <p>两行文字两行文字两行文字两行文字两行</p>
+                </a>
+              </li>
+              <li>
+                  <a href="">
+                    <div class="cover">
+                      <img alt="封面"
+                       src="./img/4.jpg" 
+                      >
+                      <span>5.8万</span>
+                    </div>
+                    <p>两行文字两行文字两行文字两行文字两行</p>
+                  </a>
+                </li>
+                <li>
+                    <a href="">
+                      <div class="cover">
+                        <img alt="封面"
+                         src="./img/5.jpg" 
+                        >
+                        <span>77.6万</span>
+                      </div>
+                      <p>两行文字两行文字两行文字两行文字两行</p>
+                    </a>
+                  </li>
+                  <li>
+                      <a href="">
+                        <div class="cover">
+                          <img alt="封面"
+                           src="./img/6.jpg" 
+                          >
+                          <span>32.9万</span>
+                        </div>
+                        <p>两行文字两行文字两行文字两行文字两行</p>
+                      </a>
+                    </li>
+               
         </ul>
+        <h2>最新音乐</h2> 
         <ul class="newSongs">
+           
+              <p>xxx</p>
+              <p>xxx</p>
+              <p>xxx</p>
+              <p>xxx</p>
+              <p>xxx</p>
+              <p>xxx</p>
+              <p>xxx</p>
+              <p>xxx</p>
+              <p>xxx</p>
+              <p>xxx</p>
+              <p>xxx</p>
         </ul>
       </section>
       <section class="tabContainer tab-2">
@@ -88,11 +161,13 @@
         </ul>
       </section>
       <section class="tabContainer tab-3">
-        tab-3
         <div class="searchInput"></div>
         <ul class="searchCommand"></ul>
       </section>
     </main>
   </div>
+  <script src="./js/eventHub.js"></script>
+  <script src="./js/initializersAV.js"></script>
+  <script src="./js/index/index.js"></script>
 </body>
-</html>
+</html> data-tab-nav='tabNav-1'

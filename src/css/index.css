@@ -7,6 +7,7 @@
   width: 100%; 
   top:0;
   left:0;
+  z-index: 5;
 }
 .topWrapper .topBar{
   display: flex;
@@ -44,6 +45,7 @@
   display: flex;
   flex-wrap: nowrap;
   position: relative;
+  background-color: #fff;
 }
 .topNavigation::after{
   background-color: #ccc;
@@ -73,7 +75,7 @@
   vertical-align:middle;
   padding: 0 5px;
 }
-.topNavigation span::after{
+.topNavigation li.active span::after{
   content:'';
   display: block;
   background-color: #d33a31;
@@ -83,23 +85,27 @@
   bottom:1px; 
   z-index: 1;
 }
- 
+.topWrapper::after{
+  display: block;
+  content: '';
+  clear: both;
+}
 .tabWrapper{
   margin-top: 105px; 
 }
-.tabWrapper .tabContainer{
+.tabContainer{
   padding-top:20px ;
   background-color: rgba(252,252,253);
 }
-.tabWrapper .tabContainer h2{
-  position: relative;
+.tabContainer h2{
   padding-left: 9px;
   margin-bottom: 14px;
   font-size: 17px;
   height: 20px;
   line-height: 20px;
+  position: relative;
 }
-.tabWrapper .tabContainer h2::after{
+.tabContainer h2::after{
   content: " ";
   position: absolute;
   left: 0;
@@ -108,4 +114,42 @@
   width: 2px;
   height: 16px;
   background-color: #d33a31;
+} 
+.recommendLists{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+.recommendLists>li{
+  width: 32.7%;  
+  position: relative;
+  padding-bottom:16px ;
+} 
+.recommendLists>li span{
+  position: absolute;
+  display: inline-block;
+  right: 5px;
+  top: 2px;
+  z-index: 3;
+ 
+  color: #fff;
+  font-size: 12px;
+  /* background-position: 0;
+  background-repeat: no-repeat;
+  background-size: 11px 10px; */
+  text-shadow: 1px 0 0 rgba(0,0,0,.15)
+}
+.recommendLists>li div::after{
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  z-index: 2;
+  background-image: linear-gradient(to bottom , rgba(0,0,0,.3),rgba(0,0,0,0));
+}
+.recommendLists>li img{
+  width: 100%;
 }
