@@ -153,3 +153,53 @@
 .recommendLists>li img{
   width: 100%;
 }
+.tab-1 .songItem{ 
+  padding-left: 10px;
+  width:100%;
+  
+} 
+.tab-1 .songItem .wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.tab-1 .newSongs .songItem::after{
+  content:'';
+  display: block;
+  width:100%;
+  height:1px;
+  background-color: #ccc;
+} 
+.tab-1 .newSongs .songWrapper{
+  padding: 6px 0;
+  overflow: hidden;
+}
+.newSongs .songWrapper .songName{
+  font-size: 17px;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;    /*用三个点表示*/
+}
+.newSongs .songWrapper .songMsg{
+  color:#888;
+  font-size: 12px;
+}
+.songWrapper .songMsg i{
+  display: inline-block;
+  width: 12px;
+  height: 8px;
+  margin-right: 4px;
+  background-size: 166px 97px;
+  background-image: url('https://s3.music.126.net/m/s/img/index_icon_2x.png?5207a28c3767992ca4bb6d4887c74880')
+}
+.newSongs .songItem .songPlay{
+  right: 0;
+  top: 0px;
+  padding: 0 10px ;
+}
+.songItem .songPlay span{
+  display: inline-block;
+  width:22px;
+  height: 22px;
+}

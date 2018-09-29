@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>我的音乐播放器首页</title>
   <link rel="stylesheet" href="./css/reset.css">
@@ -11,12 +12,12 @@
   <script src="https://at.alicdn.com/t/font_635843_7y0ijdejijmxi529.js"></script>
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
   <div class="app" id='app'>
     <header class="topWrapper clearfix">
       <section class="topBar">
         <h1 class="topSvg">
-         
           <svg class="topLogo" viewBox="0 0 1238 231" xmlns="http://www.w3.org/2000/svg" data-reactid="6">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" data-reactid="7">
               <g id="logo_white" fill-rule="nonzero" data-reactid="8">
@@ -61,13 +62,128 @@
         </div>
       </section>
       <ul class="topNavigation">
-        <li data-tab-nav='tabNav-1' class="active"><div><span>推荐音乐</span></div></li>
-        <li data-tab-nav='tabNav-2'><div><span>热歌榜</span></div></li>
-        <li data-tab-nav='tabNav-3'><div><span>搜索</span></div></li>
+        <li data-tab-nav='tabNav-1' class="active">
+          <div><span>推荐音乐</span></div>
+        </li>
+        <li data-tab-nav='tabNav-2'>
+          <div><span>热歌榜</span></div>
+        </li>
+        <li data-tab-nav='tabNav-3'>
+          <div><span>搜索</span></div>
+        </li>
       </ul>
     </header>
     <main class="tabWrapper">
-      <section class="tabContainer tab-1"></section>
+      <section class="tabContainer tab-1">
+        <h2>推荐歌单</h2>
+        <ul class="recommendLists">
+          <li>
+            <a href="">
+              <div class="cover">
+                <img alt="封面" src="./img/1.jpg">
+                <span>62.8万</span>
+              </div>
+              <p>两行文字两行文字两行文字两行文字两行</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="cover">
+                <img alt="封面" src="./img/2.jpg">
+                <span>162.8万</span>
+              </div>
+              <p>两行文字两行文字两行文字两行文字两行</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="cover">
+                <img alt="封面" src="./img/3.jpg">
+                <span>626.8万</span>
+              </div>
+              <p>两行文字两行文字两行文字两行文字两行</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="cover">
+                <img alt="封面" src="./img/4.jpg">
+                <span>5.8万</span>
+              </div>
+              <p>两行文字两行文字两行文字两行文字两行</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="cover">
+                <img alt="封面" src="./img/5.jpg">
+                <span>77.6万</span>
+              </div>
+              <p>两行文字两行文字两行文字两行文字两行</p>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="cover">
+                <img alt="封面" src="./img/6.jpg">
+                <span>32.9万</span>
+              </div>
+              <p>两行文字两行文字两行文字两行文字两行</p>
+            </a>
+          </li>
+        </ul>
+        <h2>最新音乐</h2>
+        <ul class="newSongs">
+          <a href="">
+            <li class="songItem">
+              <div class="wrapper">
+                <div class="songWrapper">
+                  <div class="songName">遇见xxx </div>
+                  <div class="songMsg"><i></i> 孙燕姿</div>
+                </div>
+                <div class="songPlay"><span>x</span></div>
+              </div>
+            </li>
+          </a>
+          <a href="">
+            <li class="songItem">
+              <div class="wrapper">
+                <div class="songWrapper">
+                  <div class="songName">遇见xxxxx j </div>
+                  <div class="songMsg"><i></i> 孙燕姿</div>
+                </div>
+                <div class="songPlay"><span>x</span></div>
+              </div>
+            </li>
+          </a>
+          <a href="">
+            <li class="songItem">
+              <div class="wrapper">
+                <div class="songWrapper">
+                  <div class="songName">遇见xxxx
+                    sdfjlkasdjf'
+                    xxxxx xxxxxxx </div>
+                  <div class="songMsg"><i></i> 孙燕姿</div>
+                </div>
+                <div class="songPlay"><span>x</span></div>
+              </div>
+            </li>
+          </a>
+          <a href="">
+            <li class="songItem">
+              <div class="wrapper">
+                <div class="songWrapper">
+                  <div class="songName">遇见xxx
+                    xxxxx xxxxxxx </div>
+                  <div class="songMsg"><i></i> 孙燕姿</div>
+                </div>
+                <div class="songPlay"><span>x</span></div>
+              </div>
+            </li>
+          </a>
+
+        </ul>
+      </section>
       <section class="tabContainer tab-2"></section>
       <section class="tabContainer tab-3"></section>
     </main>
@@ -79,4 +195,5 @@
   <script src="./js/index/page-2.js"></script>
   <script src="./js/index/page-3.js"></script>
 </body>
-</html> 
+
+</html>
